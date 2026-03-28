@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-neutral-950 text-white;
+}
+
+.card {
+  @apply bg-neutral-900 rounded-lg p-6 border border-neutral-800 transition-all duration-300 hover:border-neutral-700;
+}
+
+.comparison-container {
+  @apply grid grid-cols-2 gap-4 md:gap-6;
+}
+
+.price-display {
+  @apply text-3xl font-bold text-amber-400;
+}
+
+.label-text {
+  @apply text-sm text-neutral-400 uppercase tracking-wide;
+}
+
+.insight-box {
+  @apply bg-gradient-to-r from-amber-900/20 to-amber-800/10 border-l-4 border-amber-500 p-4 rounded;
+}
+
+.button-primary {
+  @apply bg-amber-500 hover:bg-amber-600 text-black font-semibold py-3 px-6 rounded-lg transition-colors;
+}
+
+.button-secondary {
+  @apply bg-neutral-800 hover:bg-neutral-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors border border-neutral-700;
+}
+
+@media (max-width: 640px) {
+  .comparison-container {
+    @apply grid-cols-1;
+  }
+}
